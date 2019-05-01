@@ -2,7 +2,7 @@
   "name": "statium-webapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://statium.io",
+  "homepage": "http://statium-io.github.io/statium-webapp",
   "dependencies": {
     "@types/jest": "24.0.12",
     "@types/node": "11.13.8",
