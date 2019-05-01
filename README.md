@@ -36,7 +36,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 The app is ready to be deployed!
 
-### `make clean``
+### `make clean`
 
 Removes all files that are ignored by Git (ie `build` and `node_modules`) so
 that you can get back to _clean_ development state if needed.
