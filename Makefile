@@ -1,7 +1,8 @@
 .PHONY: build
 
+# git clean -dfX --dry-run is useful to know how to maintain this
 clean: 
-	git clean -dfX
+	rm -rf node_modules .eslintcache
 
 install:
 	yarn install
