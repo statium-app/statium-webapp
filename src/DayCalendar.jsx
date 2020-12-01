@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components';
 import {client} from './utils/football-data-api-client'
 import {useAsync} from './utils/hooks'
+import {FormattedTime, FormattedDate} from 'react-intl'
 
 const MainContent = styled.div`
   margin: 0 auto;
@@ -63,7 +64,9 @@ function DayCalendar() {
 
       {isSuccess ? (
         <>
-          <h1>{data.filters.dateFrom}</h1>
+          <h1><FormattedDate value={data.filters.dateFrom} year="numeric"
+  month="long"
+  day="numeric" /></h1>
           <StyledTable>
             <StyledTableHeader>
               <tr>
@@ -76,10 +79,24 @@ function DayCalendar() {
               </tr>
             </StyledTableHeader>
             <StyledTableBody>
-              {data.matches.map(match => (
+              {data.matches.filter(match => {
+                if (match.competition.area.code === 'BRA') {
+                  return false                  
+                }
+                
+                if (match.competition.area.code === 'PRT') {
+                  return false                  
+                }
+
+                if (match.competition.area.code === 'ENG' && match.competition.name === "Championship") {
+                  return false                  
+                }
+
+                return true
+              }).map(match => (
                 <tr>
                   <td>{match.competition.name} ({match.competition.area.code})</td>
-                  <td>{match.utcDate}</td>
+                  <td><FormattedTime value={match.utcDate} /></td>
                   <td>{match.homeTeam.name}</td>
                   <td>{match.awayTeam.name}</td>
                   <td>{match.status}</td>
