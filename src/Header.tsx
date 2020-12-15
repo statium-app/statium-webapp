@@ -22,7 +22,7 @@ const HeaderLink = styled.a`
   color: inherit;
 `;
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <CustomHeader>
       <CustomNav>

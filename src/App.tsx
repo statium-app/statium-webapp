@@ -1,7 +1,7 @@
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 
-import { DayCalendar } from './DayCalendar';
+import { DayCalendar } from './components/DayCalendar';
 import Header from './Header';
 
 const messagesInFrench = {

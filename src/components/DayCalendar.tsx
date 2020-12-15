@@ -1,82 +1,11 @@
 import * as React from 'react';
 import { FormattedDate, FormattedTime } from 'react-intl';
-import styled from 'styled-components';
 
-import { client } from './utils/football-data-api-client';
-import { AsyncLoadingState, useAsync } from './utils/hooks';
+import { client } from 'utils/football-data-api-client';
+import { AsyncLoadingState, useAsync } from 'utils/hooks';
 
-const MainContent = styled.div`
-  margin: 0 auto;
-  padding: 0 1rem;
-  max-width: min(100ch, 100%);
-`;
-
-const StyledTable = styled.table`
-  border-radius: 0.5rem;
-  border: thin solid #eee;
-  width: 100%;
-`;
-
-const StyledTableHeader = styled.thead`
-  margin: 2rem;
-
-  & > tr {
-    & > th {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: thin solid #eee;
-    }
-  }
-`;
-
-const StyledTableBody = styled.tbody`
-  margin: 2rem;
-
-  & > tr {
-    & > td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: thin solid #eee;
-    }
-  }
-`;
-
-type Games = {
-  count: number;
-  filters: Filters;
-  matches: Array<Game>;
-};
-
-type Filters = {
-  dateFrom: Date;
-  dateTo: Date;
-};
-
-type Game = {
-  competition: Competition;
-  utcDate: string;
-  homeTeam: {
-    name: string;
-  };
-  awayTeam: {
-    name: string;
-  };
-  status: string;
-  score: {
-    fullTime: {
-      homeTeam: number;
-      awayTeam: number;
-    };
-  };
-};
-
-type Competition = {
-  id: number;
-  area: {
-    code: string;
-  };
-  name: string;
-};
+import { MainContent, StyledTable, StyledTableBody, StyledTableHeader } from './_styled';
+import { Games } from './types';
 
 const DayCalendar: React.FunctionComponent = () => {
   const initialState: Partial<AsyncLoadingState<Games>> = {};
