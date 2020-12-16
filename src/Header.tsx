@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const CustomHeader = styled.header`
   border-bottom: solid 1px #ccc;
-`
+`;
 
 const CustomNav = styled.nav`
   display: flex;
@@ -13,7 +13,7 @@ const CustomNav = styled.nav`
 `;
 
 const HeaderLink = styled.a`
-  padding: .5rem;
+  padding: 0.5rem;
   line-height: 1.75rem;
   display: inline-block;
   font-size: 1rem;
@@ -22,7 +22,7 @@ const HeaderLink = styled.a`
   color: inherit;
 `;
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <CustomHeader>
       <CustomNav>
