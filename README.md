@@ -1,6 +1,6 @@
 # Statium Webapp
 
-[![Build Status](https://travis-ci.org/statium-io/statium-webapp.svg?branch=master)](https://travis-ci.org/statium-io/statium-webapp)
+[![Build Status](https://travis-ci.org/statium-app/statium-webapp.svg?branch=master)](https://travis-ci.org/statium-app/statium-webapp)
 
 Statium Webapp is a web calendar for the football/soccer fans.
 
