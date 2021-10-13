@@ -4,6 +4,5 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Add dummy environment variables values since Travis will fail otherwise:
-// 📜 https://docs.travis-ci.com/user/pull-requests/#pull-requests-and-security-restrictions
+// Add dummy environment variables values since CI will fail otherwise:
 process.env.REACT_APP_FOOTBALL_DATA_API_AUTH_TOKEN = 'dummy';
