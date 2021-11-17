@@ -1,0 +1,3 @@
+# Proxy to the newsletter project
+/newsletter    https://statium-newsletter-git-proxying-newsletter-statium-app.vercel.app/newsletter         200
+/newsletter/*  https://statium-newsletter-git-proxying-newsletter-statium-app.vercel.app/newsletter/:splat  200
