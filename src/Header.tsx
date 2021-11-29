@@ -7,6 +7,7 @@ const CustomHeader = styled.header`
 
 const CustomNav = styled.nav`
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 1rem;
   max-width: min(100ch, 100%);
@@ -27,6 +28,7 @@ const Header = (): JSX.Element => {
     <CustomHeader>
       <CustomNav>
         <HeaderLink href="/">Statium</HeaderLink>
+        <HeaderLink href="/newsletter">Newsletter</HeaderLink>
       </CustomNav>
     </CustomHeader>
   );
