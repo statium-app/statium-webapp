@@ -1,3 +1,9 @@
+# Redirect statium.io direct traffic.
+http://statium.io/* https://www.statium.app/:splat 301!
+https://statium.io/* https://www.statium.app/:splat 301!
+http://www.statium.io/* https://www.statium.app/:splat 301!
+https://www.statium.io/* https://www.statium.app/:splat 301!
+
 # Proxy to the newsletter project
 /newsletter    https://statium-newsletter.vercel.app/newsletter         200
 /newsletter/*  https://statium-newsletter.vercel.app/newsletter/:splat  200
