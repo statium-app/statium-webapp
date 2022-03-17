@@ -7,3 +7,7 @@ https://www.statium.io/* https://www.statium.app/:splat 301!
 # Proxy to the newsletter project
 /newsletter    https://statium-newsletter.vercel.app/newsletter         200
 /newsletter/*  https://statium-newsletter.vercel.app/newsletter/:splat  200
+
+# Proxy to the blog project
+/blog    https://jovial-hawking-fbaa0c.netlify.app         200
+/blog/*  https://jovial-hawking-fbaa0c.netlify.app/:splat  200
