@@ -27,8 +27,13 @@ const Header = (): JSX.Element => {
   return (
     <CustomHeader>
       <CustomNav>
-        <HeaderLink href="/">Statium</HeaderLink>
-        <HeaderLink href="/newsletter">Newsletter</HeaderLink>
+        <div>
+          <HeaderLink href="/">Statium</HeaderLink>
+        </div>
+        <div>
+          <HeaderLink href="/newsletter">Newsletter</HeaderLink>
+          <HeaderLink href="/blog">Blog</HeaderLink>
+        </div>
       </CustomNav>
     </CustomHeader>
   );
