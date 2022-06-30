@@ -15,27 +15,22 @@ const createSubscriber = (props: CreateSubscriberProps) => {
     ? 'http://localhost:3000/api/fakeButtondown'
     : 'https://api.buttondown.email/v1/subscribers';
 
-  console.log(process.env.BUTTONDOWN_FAKE);
-  console.log(endpoint);
-
-  return true;
-
-  // return fetch(endpoint, {
-  //   method: 'POST',
-  //   headers: {
-  //     Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(props),
-  // })
-  //   .then((response) => {
-  //     const { status } = response;
-  //     return status < 400;
-  //   })
-  //   .catch((error) => {
-  //     console.error('Error:', error);
-  //     return false;
-  //   });
+  return fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(props),
+  })
+    .then((response) => {
+      const { status } = response;
+      return status < 400;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      return false;
+    });
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
