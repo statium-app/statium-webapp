@@ -1,10 +1,16 @@
-import Head from "next/head";
-import Link from "next/link";
-import Header from "./Header";
+import Head from 'next/head';
+import Link from 'next/link';
+import { ReactNode } from 'react';
+import Header from './Header';
 
-export const siteTitle = "Newsletter Foot | Statium";
+export const siteTitle = 'Newsletter Foot | Statium';
 
-export default function Layout({ children, home }) {
+type Props = {
+  children: ReactNode;
+  home: boolean;
+};
+
+export default function Layout({ children, home }: Props) {
   return (
     <div id="wrapper">
       <Head>
