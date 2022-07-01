@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import NewsletterSignupForm from '../components/NewsletterSignUpForm';
+import WhyThisNewsletter from '../components/WhyThisNewsletter';
 
 const StyledDiv = styled.div`
   color: blue;
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
         européennes.
       </p>
       <NewsletterSignupForm />
+      <WhyThisNewsletter />
     </Layout>
   );
 };
