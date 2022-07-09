@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <Layout home>
       <Head>
-        <title>Les matches de foot du jour | Statium</title>
+        <title>Les matches qui comptent | Statium</title>
         <meta
           name="description"
           content="Les calendriers, résultats et résumés du foot vu de France."
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           ></script>
         )}
       </Head>
-      <h1>Les matches qui comptent</h1>
+      <h1>⚽️ Les matches qui comptent</h1>
       <p>
         Statium guide les fans de foot qui vivent en France à ne pas rater les matches ou les
         highlights des compétitions françaises et les meilleures affiches des compétitions
