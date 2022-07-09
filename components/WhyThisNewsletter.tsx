@@ -1,4 +1,23 @@
 import { ChangeEventHandler, useState } from 'react';
+import styled from 'styled-components';
+
+const StyledFigure = styled.figure`
+  margin: 32px auto;
+  border-radius: 8px;
+  border: 3px solid hsl(230, 100%, 80%);
+  background-color: hsl(230, 100%, 98%);
+  padding: 16px 24px;
+
+  & > blockquote {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-left: 6px solid hsl(230, 100%, 80%);
+  }
+
+  & em {
+    text-decoration: underline hsl(230, 100%, 80%) 3px;
+  }
+`;
 
 const WhyThisNewsletter = () => {
   const [isShortVersion, toggleVersion] = useState<boolean>(true);
@@ -151,6 +170,20 @@ const WhyThisNewsletter = () => {
 
   return (
     <>
+      <div>
+        <StyledFigure>
+          <blockquote cite="https://www.huxley.net/bnw/four.html">
+            <p>Le foot­ball est un tré­sor à par­ta­ger.</p>
+            <p>
+              Il est un <em>jeu</em> avant d’être un pro­duit, un <em>sport</em> avant d’être un
+              mar­ché, un <em>spec­tacle</em> avant d’être un bu­si­ness.
+            </p>
+          </blockquote>
+          <figcaption>
+            — Michel Platini, <cite>L’Équipe</cite>
+          </figcaption>
+        </StyledFigure>
+      </div>
       <h2>Pourquoi s’inscrire ?</h2>
       <form>
         <label>
