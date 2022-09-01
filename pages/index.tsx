@@ -12,14 +12,13 @@ const StyledDiv = styled.div`
 
 const Home: NextPage = () => {
   return (
-    <Layout home>
+    <Layout home canonicalURL="/">
       <Head>
         <title>Les matches qui comptent | Statium</title>
         <meta
           name="description"
           content="Les calendriers, résultats et résumés du foot vu de France."
         />
-        <link rel="icon" href="/favicon.ico" />
         {process.env.NODE_ENV === 'production' && (
           <script
             defer

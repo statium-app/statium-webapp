@@ -4,18 +4,18 @@ import styled from 'styled-components';
 const StyledFigure = styled.figure`
   margin: 32px auto;
   border-radius: 8px;
-  border: 3px solid hsl(230, 100%, 80%);
-  background-color: hsl(230, 100%, 98%);
+  border: 3px solid var(--color-success-fg);
+  background-color: var(--color-success-subtle);
   padding: 16px 24px;
 
   & > blockquote {
     font-size: 1.5rem;
     font-weight: bold;
-    border-left: 6px solid hsl(230, 100%, 80%);
+    border-left: 4px solid var(--color-success-fg);
   }
 
   & em {
-    text-decoration: underline hsl(230, 100%, 80%) 3px;
+    text-decoration: underline var(--color-success-fg) 3px;
   }
 `;
 

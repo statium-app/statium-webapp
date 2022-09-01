@@ -8,13 +8,15 @@ export const siteTitle = 'Newsletter Foot | Statium';
 type Props = {
   children: ReactNode;
   home: boolean;
+  canonicalURL: string;
 };
 
-export default function Layout({ children, home }: Props) {
+const Layout = ({ children, home, canonicalURL }: Props) => {
   return (
     <div id="wrapper">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={canonicalURL} />
       </Head>
       <Header />
       <div className="markdown-body">
@@ -29,4 +31,6 @@ export default function Layout({ children, home }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default Layout;
