@@ -19,7 +19,6 @@ const Home: NextPage = () => {
           name="description"
           content="Les calendriers, résultats et résumés du foot vu de France."
         />
-        <link rel="icon" href="/favicon.ico" />
         {process.env.NODE_ENV === 'production' && (
           <script
             defer
