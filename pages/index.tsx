@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 const Home: NextPage = () => {
   return (
-    <Layout home>
+    <Layout home canonicalURL="/">
       <Head>
         <title>Les matches qui comptent | Statium</title>
         <meta
