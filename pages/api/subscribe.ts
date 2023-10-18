@@ -13,15 +13,14 @@ const createSubscriber = (props: CreateSubscriberProps) => {
   const isUsingFake = process.env.BUTTONDOWN_FAKE === 'true';
   const endpoint = isUsingFake
     ? 'http://localhost:3000/api/fakeButtondown'
-    : 'https://api.buttondown.email/v1/subscribers';
+    : 'https://buttondown.email/api/emails/embed-subscribe/statium.app';
 
   return fetch(endpoint, {
     method: 'POST',
     headers: {
-      Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(props),
+    body: JSON.stringify({ ...props, embed: '1', tag: 'website' }),
   })
     .then((response) => {
       const { status } = response;
