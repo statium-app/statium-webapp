@@ -9,27 +9,27 @@ type CreateSubscriberProps = {
   email: string;
 };
 
-const createSubscriber = (props: CreateSubscriberProps) => {
+const createSubscriber = async (props: CreateSubscriberProps) => {
   const isUsingFake = process.env.BUTTONDOWN_FAKE === 'true';
   const endpoint = isUsingFake
     ? 'http://localhost:3000/api/fakeButtondown'
-    : 'https://buttondown.email/api/emails/embed-subscribe/statium.app';
+    : 'https://api.buttondown.email/v1/subscribers';
 
-  return fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ ...props, embed: '1', tag: 'website' }),
-  })
-    .then((response) => {
-      const { status } = response;
-      return status < 400;
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      return false;
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(props),
     });
+    const { status } = response;
+    return status < 400;
+  } catch (error) {
+    console.error('Error:', error);
+    return false;
+  }
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {

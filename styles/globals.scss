@@ -3,11 +3,11 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-@import "@primer/css/base/index.scss";
-@import "@primer/css/color-modes/index.scss";
-@import "@primer/css/markdown/index.scss";
-@import "@primer/css/buttons/index.scss";
-@import "@primer/css/forms/index.scss";
+@import '@primer/css/base/index.scss';
+@import '@primer/css/color-modes/index.scss';
+@import '@primer/css/markdown/index.scss';
+@import '@primer/css/buttons/index.scss';
+@import '@primer/css/forms/index.scss';
 
 *,
 *::before,
@@ -52,4 +52,4 @@ h6 {
 /*
   Specifics
 */
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://rsms.me/inter/inter.css');

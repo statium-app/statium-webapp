@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
@@ -12,6 +14,17 @@ const CustomNav = styled.nav`
   margin: 0 auto;
   padding: 0 1rem;
   max-width: min(1000px, 100%);
+`;
+
+const HeaderInternalLink = styled(Link)`
+  padding: 0.5rem;
+  line-height: 1.75rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
 `;
 
 const HeaderLink = styled.a`
@@ -45,9 +58,7 @@ const Header = (): JSX.Element => {
     <CustomHeader>
       <CustomNav>
         <div>
-          <Link href="/">
-            <HeaderLink>Statium</HeaderLink>
-          </Link>
+          <HeaderInternalLink href="/">Statium</HeaderInternalLink>
         </div>
         <Row>
           <HeaderLink href="/newsletter">Newsletter</HeaderLink>
