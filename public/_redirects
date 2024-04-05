@@ -11,5 +11,5 @@ https://blog.statium.io/* https://www.statium.app/blog/:splat 301!
 /newsletter/*  https://statium-newsletter.vercel.app/newsletter/:splat  200
 
 # Proxy to the blog project
-/blog    https://jovial-hawking-fbaa0c.netlify.app/         200
-/blog/*  https://jovial-hawking-fbaa0c.netlify.app/:splat  200
+/blog    https://statium-editorial-content.netlify.app/        200
+/blog/*  https://statium-editorial-content.netlify.app/:splat  200
